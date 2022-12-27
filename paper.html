@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change this name</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="formatting.css">
+    <script src="density.js"></script>
+</head>
+
+
+
+
+<body>
+    <!-- <h1 class="center">Title</h1> -->
+
+    <div class="container">
+        <div class="title"><h1>Title of Chart</h1></div>
+        <div class="chart" id="test"></div>
+        <div class="statistics">
+            <div class="stat"><h5>Change in mean</h5><p>Stats: <calculated>0.07</calculated></p> <p>AStat: <calculated>0.25</calculated></p><p class="stat_explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio eaque magnam doloribus fugit aliquam voluptatum</p></div>
+            <div class="stat"><h5>Change in variance</h5><p>Stats: <calculated>0.07</calculated><p>AStat: <calculated>0.25</calculated></p><p class="stat_explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio eaque magnam doloribus fugit aliquam voluptatum</p></div>
+        </div>
+        <div class="explanation"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi facilis corrupti cumque ratione consectetur aspernatur ullam omnis officiis suscipit, officia id assumenda ea minima animi optio! Repudiandae molestiae laboriosam iusto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sit explicabo veniam hic iusto non qui? Eligendi veritatis, saepe obcaecati nesciunt illo, minus quae quaerat natus nemo amet cum atque! </p></div>
+      </div>
+</body>
+
+
+
+<script>
+DATA = {{data}}
+</script>
+
+
+<script>
+DENSITY_PLOTS({ArraysOfObject: DATA, id: "#test"})
+</script>
