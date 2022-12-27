@@ -67,5 +67,22 @@ DENSITY_PLOTS = ({ArraysOfObject=DATA, id="a", width=600, height=400} = {}) => {
         path_joiner(i) 
     }
 
+    var items = chart.selectAll(".legend").data(ArraysOfObject)
+                  
+items 
+.join("rect").attr("x", (d,i)=>i*100).attr("class", "legend")
+     .attr("y", 15)
+     .attr("width", 10)
+     .attr("height", 10)
+  .attr("transform", "translate("+margin.left+",0)")
+     .style("fill", function(d, i) { return colors[i%3]; });
+  
+  items.join("text")
+     .attr("x", (d,i)=>i*100)
+     .attr("y", 10)
+     .style("font-size", "9px")
+    .attr("transform", "translate("+margin.left+",0)")
+     .text(function(d) { return d.key; });
+
     return chart.node()
     }
